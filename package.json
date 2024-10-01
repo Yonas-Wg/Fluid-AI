@@ -12,9 +12,11 @@
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
     "@mui/icons-material": "^6.1.1",
+    "flag-icons": "^7.2.3",
     "next": "14.2.13",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-flag-kit": "^1.1.1"
   },
   "devDependencies": {
     "@types/node": "^20",
