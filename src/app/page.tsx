@@ -13,8 +13,8 @@ import Footer from './components/footer';
 
 export default function Home() {
   const [scrolled, setScrolled] = useState(false);
-  const [svgPosition, setSvgPosition] = useState(317); 
-  const svgHeight = scrolled ? '115vh' : '553px';
+  const [svgPosition, setSvgPosition] = useState(0); 
+  const svgHeight = scrolled ? '188vh' : '1650px';
 
   // Calculate the position for the SVG based on viewport height
   useEffect(() => {
@@ -58,7 +58,7 @@ export default function Home() {
       style={{
         position: 'relative',
         height: '100vh', 
-       // overflow: 'hidden', 
+       overflowX: 'hidden',
         transition: 'background-color 0.01 ease',
         display: 'flex',
         flexDirection: 'column',
@@ -72,7 +72,7 @@ export default function Home() {
         left: '50%',
         top: scrolled ? '40%' : '50%', 
         transform: `translate(-50%, -50%) scale(${scrolled ? 0.8 : 1})`,
-        transition: 'top 2s ease, transform 0.8s ease', 
+        transition: 'top 3s ease, transform 0.9s ease', 
       }}
     >
         <Image
@@ -87,13 +87,13 @@ export default function Home() {
 
 
       {/* Card Image on Scroll */}
-      {scrolled && (
-     <div
+           <div
      style={{
        position: 'absolute',
        width: '214.46px',
        height: '278px',
-       left: '235px',
+       left: scrolled ? '235px' : '-235px',
+       transition: 'left 3s ease-in, left 1s ease-out', 
        top: '135px',
        borderRadius: '15.8857px',
        overflow: 'hidden', 
@@ -117,7 +117,7 @@ export default function Home() {
          position: 'absolute',
          width: '100%',
          height: '100%',
-         backgroundColor: 'rgba(0, 0, 0, 0.55)', 
+         backgroundColor: 'rgba(0, 0, 0, 0.35)', 
          zIndex: 1, 
          left: scrolled ? '0' : '-15px',
          transition: 'left 0.5s ease-in-out', 
@@ -280,15 +280,13 @@ export default function Home() {
 
     
         </div>
-      )}
+      
 
-{scrolled && (
       <Box
         sx={{
           position: 'absolute',
           width: '282.18px',
           height: '93.54px',
-          left: scrolled ? '-85px' : '-105px', 
           top: '354px',
           background: 'rgba(38, 38, 38, 0.3)',
           border: '1px solid rgba(255, 255, 255, 0.1)',
@@ -297,7 +295,8 @@ export default function Home() {
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-          transition: 'left 0.5s ease-in-out', 
+          left: scrolled ? '-85px' : '-285px', 
+          transition: 'left 3s ease-in, left 1s ease-out', 
         }}
       >
         <Typography
@@ -312,15 +311,15 @@ export default function Home() {
         </Typography>
       </Box>
 
-        )}
-{scrolled && (
+        
         <Box
           sx={{
             boxSizing: 'border-box',
             position: 'absolute',
             width: '282.18px',
             height: '183.96px',
-            left: '-7px',
+            left: scrolled ? '-7px' : '-325px', 
+            transition: 'left 3s ease-in, left 1s ease-out', 
             top: '522px',
             background: 'rgba(38, 38, 38, 0.3)',
             border: '1px solid rgba(255, 255, 255, 0.1)',
@@ -333,8 +332,8 @@ export default function Home() {
         >
          <Upcoming scrolled={scrolled}/>   
     </Box>
-      )}
-  {scrolled && (
+  
+
 <Box
   sx={{
     boxSizing: 'border-box',
@@ -347,7 +346,8 @@ export default function Home() {
     position: 'absolute',
     width: '158.31px',
     height: '51.15px',
-    left: '398px',
+    left: scrolled ? '398px' : '-398px', 
+    transition: 'left 3s ease-in, left 1s ease-out', 
     top: '655px',
     background: 'rgba(100, 100, 100, 0.3)',
     border: '1px solid rgba(255, 255, 255, 0.1)',
@@ -365,16 +365,17 @@ export default function Home() {
     Cafe Nearby
   </Typography>
 </Box>
-    )}
 
-{scrolled && (
+
+
 <Box
   sx={{
     boxSizing: 'border-box',
     position: 'absolute',
     width: '282.18px',
     height: '93.54px',
-    left: '1020px',
+    left: scrolled ? '1020px' : '1901px', 
+    transition: 'left 3s ease-in, left 1s ease-out', 
     top: '157px',
     background: 'rgba(38, 38, 38, 0.3)',
     border: '1px solid rgba(255, 255, 255, 0.1)',
@@ -419,15 +420,16 @@ export default function Home() {
     Renew Car Insurance
   </Typography>
 </Box>
-    )}
-{scrolled && (
+
+
   <Box
     sx={{
       boxSizing: 'border-box',
       position: 'absolute',
       width: '282.18px',
       height: '183.96px',
-      left: '1201px', 
+      left: scrolled ? '1201px' : '1901px', 
+      transition: 'left 3s ease-in, left 1s ease-out', 
       top: '287px',    
       background: 'rgba(38, 38, 38, 0.3)',
       border: '1px solid rgba(255, 255, 255, 0.1)',
@@ -440,8 +442,7 @@ export default function Home() {
   >
    <Upcoming scrolled={scrolled}/>
   </Box>
-)}
-{scrolled && (
+
 <Box
   sx={{
     boxSizing: 'border-box',
@@ -454,7 +455,8 @@ export default function Home() {
     position: 'absolute',
     width: '161.31px',
     height: '51.15px',
-    left: '1345px', 
+    left: scrolled ? '1345px' : '1945px', 
+    transition: 'left 3s ease-in, left 1s ease-out', 
     top: '522px',   
     background: 'rgba(38, 38, 38, 0.2)',
     border: '1px solid rgba(255, 255, 255, 0.1)',
@@ -476,9 +478,8 @@ export default function Home() {
     Book a Flight
   </Typography>
 </Box>
-)}
 
-{scrolled && (
+
 <Box
   sx={{
     boxSizing: 'border-box',
@@ -491,7 +492,8 @@ export default function Home() {
     position: 'absolute',
     width: '136.31px',
     height: '51.15px',
-    left: '1316px',
+    left: scrolled ? '1316px' : '1901px', 
+    transition: 'left 3s ease-in, left 1s ease-out', 
     top: '591px',  
     background: 'rgba(38, 38, 38, 0.1)',
     border: '1px solid rgba(255, 255, 255, 0.1)',
@@ -514,15 +516,16 @@ export default function Home() {
     Trip Ideas
   </Typography>
 </Box>
-)}
 
-{scrolled && (
+
+
  <Box
  sx={{
    position: 'absolute',
    width: '268.15px',
    height: '289.98px',
-   left: '990px',
+   left: scrolled ? '990px' : '1990px', 
+    transition: 'left 3s ease-in, left 1s ease-out', 
    top: ' 655px',
    backgroundImage: 'url(/images/02.jpg)', 
    backgroundSize: 'cover',
@@ -642,7 +645,7 @@ export default function Home() {
   </Box>
 </Box>
 
-)}
+
 
 <FlightInfoDisplay scrolled={scrolled} />
 
@@ -653,57 +656,77 @@ export default function Home() {
           position: 'absolute',
           width: '2580px',
           height: '553px',
-          left: '56.73px',
-          top: `${svgPosition}px`,
+          left: '-10px',
+         // top: `${svgPosition}px`,
+          top: scrolled ? '60px' : `${svgPosition}px`, 
           zIndex: -1,
           transition: 'top 0.8s ease',
         }}
       >
-        <svg width="2900" height={svgHeight} viewBox="0 0 2540 553" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <g filter="url(#filter0_f_2_4077)">
-            <path
-              d="M1002.35 344.926C1166.01 346.441 1266.8 330.667 1325.97 311.048C1381.92 292.5 1431.27 242.545 1483.45 215.121L1549.74 180.273C1616.59 145.133 1698.83 180.573 1719.19 253.302C1726.08 277.892 1725.25 304.097 1714.06 327.052C1631.83 495.773 1371.25 813.138 851.844 975.618C292.822 1150.49 93.3418 948.145 63.4797 825.112C51.5347 705.663 46.9956 442.397 124.399 344.926C176.265 279.613 259.991 257.85 328.997 254.193C386.099 251.168 441.172 270.416 496.474 284.957C599.363 312.009 774.114 342.813 1002.35 344.926Z"
-              fill="#B76E4D" 
-            />
-          </g>
-          <defs>
-            <filter id="filter0_f_2_4077" x="-109.195" y="0.665665" width="1998.7" height="1209.07" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-              <feFlood floodOpacity="0" result="BackgroundImageFix" />
-              <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-              <feGaussianBlur stdDeviation="82.9604" result="effect1_foregroundBlur_2_4077" />
-            </filter>
-          </defs>
-        </svg>
+        
+        <svg width="1840" height={svgHeight} viewBox="0 0 1540 1210" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_f_2_2515)">
+<path d="M942.351 344.926C1106.01 346.441 1206.8 330.667 1265.97 311.048C1321.92 292.5 1371.27 242.545 1423.45 215.121L1489.74 180.273C1556.59 145.133 1638.83 180.573 1659.19 253.302C1666.08 277.892 1665.25 304.097 1654.06 327.052C1571.83 495.773 1311.25 813.138 791.844 975.618C232.822 1150.49 33.3418 948.145 3.47967 825.112C-8.46529 705.663 -13.0044 442.397 64.3987 344.926C116.265 279.613 199.991 257.85 268.997 254.193C326.099 251.168 381.172 270.416 436.474 284.957C539.363 312.009 714.114 342.813 942.351 344.926Z" fill="#612B10"/>
+</g>
+<defs>
+<filter id="filter0_f_2_2515" x="-169.195" y="0.665909" width="1998.7" height="930.07" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="82.9604" result="effect1_foregroundBlur_2_2515"/>
+</filter>
+</defs>
+
+<g filter="url(#filter0_f_2_2516)">
+<path d="M964.335 344.935C1128 346.45 1228.78 330.676 1287.96 311.057C1343.9 292.508 1393.26 242.554 1445.43 215.13L1511.73 180.282C1578.58 145.141 1660.81 180.582 1681.18 253.31C1688.06 277.9 1687.23 304.106 1676.04 327.061C1593.81 495.782 1333.23 813.146 813.829 975.627C254.806 1150.5 55.3262 948.154 25.464 825.121C13.5191 705.671 8.97997 442.405 86.3831 344.935C138.25 279.621 221.975 257.859 290.982 254.202C348.084 251.176 403.156 270.425 458.459 284.965C561.348 312.017 736.098 342.821 964.335 344.935Z" fill="#E48F4C"/>
+</g>
+<defs>
+<filter id="filter0_f_2_2516" x="-147.211" y="0.674454" width="1698.7" height="930.07" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="82.9604" result="effect1_foregroundBlur_2_2516"/>
+</filter>
+</defs>
+
+
+<g filter="url(#filter0_f_2_2517)" transform="translate(0, 500)">
+<path d="M992.573 321.971C1135.59 323.296 1223.66 309.511 1275.37 292.367C1324.26 276.159 1367.39 232.506 1412.98 208.542L1470.91 178.09C1529.33 147.382 1601.19 178.352 1618.98 241.906C1625 263.394 1624.27 286.293 1614.5 306.352C1542.64 453.788 1314.93 731.117 861.053 873.1C372.552 1025.91 198.237 849.093 172.142 741.581C161.704 637.2 157.738 407.146 225.376 321.971C268.017 268.276 335.299 248.265 393.329 243.423C450.313 238.669 505.582 258.304 561.031 272.274C652.092 295.216 800.705 320.195 992.573 321.971Z" fill="#F3C78B"/>
+</g>
+<defs>
+<filter id="filter0_f_2_2517" x="10.319473" y="10.209122" width="1698.7" height="420.07" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="82.9604" result="effect1_foregroundBlur_2_2517"/>
+</filter>
+</defs>
+</svg>
       </div>
 
       {/* "Unlock Seamless Efficiency" text */}
-      {scrolled && (
-        <h1
-          style={{
-            position: 'absolute',
-            width: '668px',
-            height: '176px',
-            left: '50%', 
-            top: '403.15px', 
-            transform: 'translateX(-50%)',
-            fontFamily: "'SF Pro Display', sans-serif",
-            fontStyle: 'normal',
-            fontWeight: 400,
-            fontSize: '80px',
-            lineHeight: '110%',
-            textAlign: 'center',
-            letterSpacing: '-0.02em',
-            color: '#FFFFFF',
-            transition: 'opacity 0.8s easeout',
-            opacity: 1, 
-          }}
-        >
-          Unlock Seamless Efficiency
-        </h1>
-      )}
+  <h1
+    style={{
+      position: 'absolute',
+      width: '668px',
+      height: '176px',
+      left: '50%',  
+      transform: 'translateX(-50%)',
+      fontFamily: "'SF Pro Display', sans-serif",
+      fontStyle: 'normal',
+      fontWeight: 400,
+      fontSize: '80px',
+      lineHeight: '110%',
+      textAlign: 'center',
+      letterSpacing: '-0.02em',
+      color: '#FFFFFF',
+      transition: 'top 0.8s ease-out, opacity 0.8s ease-out', 
+      opacity: scrolled ? 1 : 0,
+      top: scrolled ? '403.15px' : '603.15px', 
+    }}
+  >
+    Unlock Seamless Efficiency
+  </h1>
+
 
             {/* Join Waitlist button */}
-            {scrolled && (
                 <Link href="/JoinWaitlistPage">
         <button
           style={{
@@ -717,7 +740,6 @@ export default function Home() {
             width: '167px',
             height: '52px',
             left: '50%', 
-            top: '611.15px',
             transform: scrolled ? 'translateX(-50%)' : 'translateX(-50%) translateY(20px)', 
             background: '#FFFFFF',
             boxShadow: '0px 5px 30px rgba(255, 255, 255, 0.61)',
@@ -725,9 +747,12 @@ export default function Home() {
             border: 'none',
             cursor: 'pointer', 
             fontFamily: "'SF Pro Display', sans-serif",
+            fontWeight:'semi-bold',
             fontSize: '16px', 
             color: '#000000', 
-            transition: 'transform 0.8s ease-out, background 0.3s ease', 
+            transition: 'top 0.8s ease-out, opacity 0.8s ease-out', 
+            opacity: scrolled ? 1 : 0,
+            top: scrolled ? '611.15px' : '713.15px', 
           }}
           onMouseEnter={(e) => {
             e.currentTarget.style.background = '#f0f0f0'; 
@@ -739,8 +764,7 @@ export default function Home() {
           Join Waitlist
         </button>
         </Link>
-      )}
-
+  
 
       {/* Scroll Up Button */}
       {!scrolled && (
@@ -763,32 +787,36 @@ export default function Home() {
         </button>
       )}
 
-      {/* Top Navigation */}
-      <header
-        style={{
-          display: 'flex',
-          justifyContent: 'space-between',
-          padding: '32px',
-          alignItems: 'center',
-        }}
-      >
-        <nav style={{ display: 'flex', gap: '32px' }}>
-          <a href="#" style={{ textDecoration: 'none', fontSize: '18px' }}>
-            What we believe
-          </a>
-          <a href="#" style={{ textDecoration: 'none', fontSize: '18px' }}>
-            Our Features
-          </a>
-        </nav>
-        <nav style={{ display: 'flex', gap: '32px' }}>
-          <a href="#" style={{ textDecoration: 'none', fontSize: '18px' }}>
-            Our Story
-          </a>
-          <a href="#" style={{ textDecoration: 'none', fontSize: '18px' }}>
-            The Waitlist
-          </a>
-        </nav>
-      </header>
+<header
+  style={{
+    display: 'flex',
+    justifyContent: 'space-between',
+    padding: '32px',
+    alignItems: 'center',
+    position: 'absolute', 
+    top: 0, 
+    width: '100%', 
+    zIndex: 1000, 
+    boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)',
+  }}
+>
+  <nav style={{ display: 'flex', gap: '32px' }}>
+    <a href="#" style={{ textDecoration: 'none', fontSize: '18px' }}>
+      What we believe
+    </a>
+    <a href="#" style={{ textDecoration: 'none', fontSize: '18px' }}>
+      Our Features
+    </a>
+  </nav>
+  <nav style={{ display: 'flex', gap: '32px' }}>
+    <a href="#" style={{ textDecoration: 'none', fontSize: '18px' }}>
+      Our Story
+    </a>
+    <a href="#" style={{ textDecoration: 'none', fontSize: '18px' }}>
+      The Waitlist
+    </a>
+  </nav>
+</header>
     </div>
   );
 }

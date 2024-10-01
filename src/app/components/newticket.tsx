@@ -9,13 +9,14 @@ interface FlightInfoDisplayProps {
   
   return (
     <>
-      {scrolled && (
+ 
         <Box
           sx={{
             position: 'absolute',
             width: '398px',
             height: '217.19px',
-            left: '262px',
+            left: scrolled ? '262px' : '-562px', 
+            transition: 'left 3s ease-in, left 1s ease-out', 
             top: '770px',
             background: 'rgba(169, 169, 169, 0.5)',
             borderRadius: '24.9443px',
@@ -318,7 +319,6 @@ interface FlightInfoDisplayProps {
             7 hours 10 mins
           </Typography>
         </Box>
-      )}
     </>
   );
 };
