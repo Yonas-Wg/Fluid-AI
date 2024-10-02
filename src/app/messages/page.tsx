@@ -2,7 +2,7 @@ import React from 'react';
 import Explore from '../explore/page';
 import HeaderWithIcons from '../components/homeicon2';
 import FluidAISection from '../components/fluiaisection2';
-
+/* eslint-disable-next-line @typescript-eslint/prefer-as-const */
 
 const Messages = () => {
     const styles = {

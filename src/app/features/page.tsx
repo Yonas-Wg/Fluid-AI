@@ -2,7 +2,7 @@ import React from 'react';
 import FluidAISection from '../components/fluiaisection2';
 import IconWithBackground from '../components/featureai';
 import LocalCalendar from '../calendar/page';
-
+/* eslint-disable-next-line @typescript-eslint/prefer-as-const */
 const Features = () => {
     const styles = {
         container: {

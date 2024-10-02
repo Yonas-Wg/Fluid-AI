@@ -9,10 +9,8 @@ import Typography from '@mui/material/Typography';
 import FlightInfoDisplay from './components/newticket';
 import Upcoming from './components/upcoming';
 import Link from 'next/link';
-import Footer from './components/footer';
 import Features from './features/page';
-import LocalCalendar  from './calendar/page';
-
+/* eslint-disable-next-line @typescript-eslint/prefer-as-const */
 export default function Home() {
   const [scrolled, setScrolled] = useState(false);
   const [svgPosition, setSvgPosition] = useState(0); 

@@ -4,7 +4,7 @@ import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
 import HeaderWithIcons from '../components/HomeIcon';
 import FluidAISection from '../components/FluidAISection';
 import FullPageLayout from '../services/page';
-
+/* eslint-disable-next-line @typescript-eslint/prefer-as-const */
 const Explore = () => {
   return (
     <div

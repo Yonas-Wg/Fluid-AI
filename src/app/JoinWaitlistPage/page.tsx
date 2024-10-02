@@ -8,7 +8,7 @@ import Divider from '@mui/material/Divider';
 
 const JoinWaitlistPage = () => {
   const [open, setOpen] = useState(false);
-  const svgHeight = 553; // Adjust as necessary
+
 
   return (
     <>

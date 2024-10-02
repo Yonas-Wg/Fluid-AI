@@ -1,5 +1,5 @@
 import React from 'react';
-
+/* eslint-disable-next-line @typescript-eslint/prefer-as-const */
 const FluidAISection = () => {
   return (
     <div style={styles.container as React.CSSProperties}>

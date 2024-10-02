@@ -1,5 +1,5 @@
 import React from 'react';
-
+/* eslint-disable-next-line @typescript-eslint/prefer-as-const */
 const IconWithBackground: React.FC = () => {
   const iconStyles: React.CSSProperties = {
     left: '0', 
