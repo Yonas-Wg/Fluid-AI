@@ -313,7 +313,7 @@ const Explore = () => {
             fontWeight: 500,
             fontSize: '14.235px',
             lineHeight: '100%',
-            color: 'rgba(255, 255, 255, 0.6)', // White 60%
+            color: 'rgba(255, 255, 255, 0.6)',
             flex: 'none',
             order: 0,
             flexGrow: 0,
@@ -644,7 +644,6 @@ const Explore = () => {
 
  </div>
 
- //////
 
  <div
      style={{
@@ -1129,8 +1128,6 @@ const Explore = () => {
           order: 1,
           flexGrow: 0,
           position: 'absolute', 
-        //  left: '7.89px', 
-         // top: '166px',
           zIndex: 2, 
         }}
       >
