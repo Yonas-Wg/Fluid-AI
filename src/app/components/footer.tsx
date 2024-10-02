@@ -1,10 +1,15 @@
 import React from 'react';
 import { Box, Typography, Link } from '@mui/material';
 
+
+
 const Footer = () => {
   return (
-    <Box sx={{ position: 'relative', background: '#000000', padding: '20px',height:'427px',width:'1540px', color: 'rgba(255, 255, 255, 0.5)' }}>
+  
+    <Box sx={{ position: 'relative', left: '-620px',
+      top: '59px', background: '#000000', padding: '20px',height:'427px',width:'1540px', color: 'rgba(255, 255, 255, 0.5)' }}>
       {/* Logo */}
+    
       <Box
         sx={{
           position: 'absolute',

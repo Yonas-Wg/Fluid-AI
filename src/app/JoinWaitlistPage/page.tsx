@@ -4,6 +4,7 @@ import { Box, Typography, Button, Select, MenuItem, ListItemIcon, ListItemText }
 import KeyboardArrowDown from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUp from '@mui/icons-material/KeyboardArrowUp';
 import Footer from '../components/footer';
+import Divider from '@mui/material/Divider';
 
 const JoinWaitlistPage = () => {
   const [open, setOpen] = useState(false);
@@ -16,6 +17,7 @@ const JoinWaitlistPage = () => {
         position: 'relative',
         width: '100%',
         height: '100vh',
+        left: '-580px',
         backgroundColor: 'black',
         overflow: 'hidden',
       }}
@@ -148,6 +150,25 @@ const JoinWaitlistPage = () => {
           <MenuItem value="">
             <em>Select your country</em>
           </MenuItem>
+          <MenuItem value="uae">
+            <Box sx={{ display: 'flex', alignItems: 'center' }}>
+              <ListItemIcon sx={{ minWidth: '28px' }}>
+                <img
+                  src="/images/flags/uae.png"
+                  alt="United States"
+                  style={{
+                    width: '28px',
+                    height: '28px',
+                    borderRadius: '50%',
+                    overflow: 'hidden',
+                    objectFit: 'cover',
+                    objectPosition: '20% 10%',
+                  }}
+                />
+              </ListItemIcon>
+              <ListItemText primary="United Arab Emirates" sx={{ marginLeft: '10px' }} />
+            </Box>
+          </MenuItem>
           <MenuItem value="us">
             <Box sx={{ display: 'flex', alignItems: 'center' }}>
               <ListItemIcon sx={{ minWidth: '28px' }}>
@@ -160,13 +181,50 @@ const JoinWaitlistPage = () => {
                     borderRadius: '50%',
                     overflow: 'hidden',
                     objectFit: 'cover',
+                    objectPosition: '20% 10%',
                   }}
                 />
               </ListItemIcon>
-              <ListItemText primary="United States" sx={{ marginLeft: '10px' }} />
+              <ListItemText primary="USA" sx={{ marginLeft: '10px' }} />
             </Box>
           </MenuItem>
-          {/* Add other MenuItems for countries here... */}
+          <MenuItem value="po">
+            <Box sx={{ display: 'flex', alignItems: 'center' }}>
+              <ListItemIcon sx={{ minWidth: '28px' }}>
+                <img
+                  src="/images/flags/poland.png"
+                  alt="United States"
+                  style={{
+                    width: '28px',
+                    height: '28px',
+                    borderRadius: '50%',
+                    overflow: 'hidden',
+                    objectFit: 'cover',
+                  }}
+                />
+              </ListItemIcon>
+              <ListItemText primary="Poland" sx={{ marginLeft: '10px' }} />
+            </Box>
+          </MenuItem>
+          <MenuItem value="fr">
+            <Box sx={{ display: 'flex', alignItems: 'center' }}>
+              <ListItemIcon sx={{ minWidth: '28px' }}>
+                <img
+                  src="/images/flags/france.png"
+                  alt="United States"
+                  style={{
+                    width: '28px',
+                    height: '28px',
+                    borderRadius: '50%',
+                    overflow: 'hidden',
+                    objectFit: 'cover',
+                  }}
+                />
+              </ListItemIcon>
+              <ListItemText primary="France" sx={{ marginLeft: '10px' }} />
+            </Box>
+          </MenuItem>
+       
         </Select>
       </Box>
 
@@ -212,6 +270,7 @@ const JoinWaitlistPage = () => {
 
   
     </Box>
+    <Divider style={{ margin: '0px 0',color:'white' }} />
     <Footer/>
     </>
   );

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
+import JoinWaitlistPage from '../JoinWaitlistPage/page';
 
 const CuriosityPage = () => {
     const plusIcon = (
@@ -9,12 +10,13 @@ const CuriosityPage = () => {
     );
 
     return (
+        <>
         <Box
             sx={{
                 position: 'relative',
                 width: '100%',
                 height: '100vh',
-                left: '60px',
+                left: '-600px',
                 top: '150px',
                 background: 'transparent',
             }}
@@ -28,10 +30,10 @@ const CuriosityPage = () => {
                     fontStyle: 'normal',
                     fontWeight: 400,
                     fontSize: '56px',
-                    lineHeight: '110%', // or 62px
+                    lineHeight: '110%', 
                     letterSpacing: '-0.02em',
                     color: '#FFFFFF',
-                    marginBottom: '16px', // Add space below the main question
+                    marginBottom: '16px',
                 }}
             >
                 What can curiosity, wonder, and awe do for you?
@@ -305,6 +307,9 @@ const CuriosityPage = () => {
               
             </Box>
         </Box>
+        <div style={{ marginTop: '300px' }}>
+        <JoinWaitlistPage />
+      </div></>
     );
 };
 

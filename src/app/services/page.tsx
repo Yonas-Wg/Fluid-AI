@@ -1,16 +1,14 @@
 'use client';
 import React, { useState } from 'react';
 import { Box, Typography } from '@mui/material';
+import CuriosityPage from '../CuriosityPage/page';
 
 const FullPageLayout = () => {
-  // Define state to track the current step
   const [currentStep, setCurrentStep] = useState(0);
-
-  // Dynamic content for each step
   const content = [
     {
       text: 'Fluid has Internet access, so you can get up-to-date information from it.',
-      image: '/images/services/fluid1.png',
+      image: '/images/services/fluid4.jpg',
       time: 'Time for work',
     },
     {
@@ -31,10 +29,12 @@ const FullPageLayout = () => {
   };
 
   return (
+    <>
     <Box
       sx={{
         position: 'relative',
         width: '100%',
+        left:'-650px',
         height: '100vh',
         backgroundImage: `url(${content[currentStep].image})`,
         backgroundSize: 'cover',
@@ -50,7 +50,7 @@ const FullPageLayout = () => {
           left: '50%',
           top: '50%',
           transform: 'translate(-50%, -50%)',
-          background: 'linear-gradient(187.83deg, rgba(186, 186, 186, 0) 14.03%, rgba(186, 186, 186, 0.4) 94.25%)',
+          background: 'linear-gradient(187.83deg, rgba(186, 186, 186, 0.1) 14.03%, rgba(186, 186, 186, 0.4) 94.25%)',
           border: '1px solid rgba(255, 255, 255, 0.4)',
           borderRadius: '32px',
         }}
@@ -70,7 +70,7 @@ const FullPageLayout = () => {
             lineHeight: '120%',
             letterSpacing: '-0.02em',
             color: '#FFFFFF',
-            opacity: 0.9,
+            opacity: 3,
           }}
         >
           {content[currentStep].text}
@@ -163,6 +163,9 @@ const FullPageLayout = () => {
         />
       </Box>
     </Box>
+    <div style={{ marginTop: '100px' }}>
+    <CuriosityPage />
+  </div></>
   );
 };
 

@@ -10,6 +10,8 @@ import FlightInfoDisplay from './components/newticket';
 import Upcoming from './components/upcoming';
 import Link from 'next/link';
 import Footer from './components/footer';
+import Features from './features/page';
+import LocalCalendar  from './calendar/page';
 
 export default function Home() {
   const [scrolled, setScrolled] = useState(false);
@@ -67,19 +69,20 @@ export default function Home() {
     >
       {/* Fluid AI Logo */}
       <main
-      style={{
-        position: 'absolute',
-        left: '50%',
-        top: scrolled ? '40%' : '50%', 
-        transform: `translate(-50%, -50%) scale(${scrolled ? 0.8 : 1})`,
-        transition: 'top 3s ease, transform 0.9s ease', 
-      }}
-    >
+  style={{
+    position: 'absolute',
+    left: '50%',
+    top: scrolled ? '40%' : '50%', 
+    transform: `translate(-50%, -50%) scale(${scrolled ? 0.8 : 1})`,
+    transition: 'top 2s ease, transform 0.9s ease-out',  
+  }}
+>
         <Image
           src="/images/fluidai.png"
           alt="Fluid AI"
           width={scrolled ? 200 : 841}
           height={scrolled ? 50 : 180} 
+         style={{ transition: 'width 1.5s ease-out, 1.5s ease-in'}}
           priority
           onClick={handleImageClick} 
         />
@@ -93,7 +96,7 @@ export default function Home() {
        width: '214.46px',
        height: '278px',
        left: scrolled ? '235px' : '-235px',
-       transition: 'left 3s ease-in, left 1s ease-out', 
+       transition: 'left 2s ease-in, left 2.4s ease-out', 
        top: '135px',
        borderRadius: '15.8857px',
        overflow: 'hidden', 
@@ -296,7 +299,7 @@ export default function Home() {
           justifyContent: 'center',
           alignItems: 'center',
           left: scrolled ? '-85px' : '-285px', 
-          transition: 'left 3s ease-in, left 1s ease-out', 
+          transition: 'left 3s ease-in, left 3s ease-out', 
         }}
       >
         <Typography
@@ -319,7 +322,7 @@ export default function Home() {
             width: '282.18px',
             height: '183.96px',
             left: scrolled ? '-7px' : '-325px', 
-            transition: 'left 3s ease-in, left 1s ease-out', 
+            transition: 'left 3s ease-in, left 3s ease-out', 
             top: '522px',
             background: 'rgba(38, 38, 38, 0.3)',
             border: '1px solid rgba(255, 255, 255, 0.1)',
@@ -347,7 +350,7 @@ export default function Home() {
     width: '158.31px',
     height: '51.15px',
     left: scrolled ? '398px' : '-398px', 
-    transition: 'left 3s ease-in, left 1s ease-out', 
+    transition: 'left 3s ease-in, left 3s ease-out', 
     top: '655px',
     background: 'rgba(100, 100, 100, 0.3)',
     border: '1px solid rgba(255, 255, 255, 0.1)',
@@ -375,7 +378,7 @@ export default function Home() {
     width: '282.18px',
     height: '93.54px',
     left: scrolled ? '1020px' : '1901px', 
-    transition: 'left 3s ease-in, left 1s ease-out', 
+    transition: 'left 3s ease-in, left 3s ease-out', 
     top: '157px',
     background: 'rgba(38, 38, 38, 0.3)',
     border: '1px solid rgba(255, 255, 255, 0.1)',
@@ -429,7 +432,7 @@ export default function Home() {
       width: '282.18px',
       height: '183.96px',
       left: scrolled ? '1201px' : '1901px', 
-      transition: 'left 3s ease-in, left 1s ease-out', 
+      transition: 'left 3s ease-in, left 3s ease-out', 
       top: '287px',    
       background: 'rgba(38, 38, 38, 0.3)',
       border: '1px solid rgba(255, 255, 255, 0.1)',
@@ -456,7 +459,7 @@ export default function Home() {
     width: '161.31px',
     height: '51.15px',
     left: scrolled ? '1345px' : '1945px', 
-    transition: 'left 3s ease-in, left 1s ease-out', 
+    transition: 'left 3s ease-in, left 3s ease-out', 
     top: '522px',   
     background: 'rgba(38, 38, 38, 0.2)',
     border: '1px solid rgba(255, 255, 255, 0.1)',
@@ -493,7 +496,7 @@ export default function Home() {
     width: '136.31px',
     height: '51.15px',
     left: scrolled ? '1316px' : '1901px', 
-    transition: 'left 3s ease-in, left 1s ease-out', 
+    transition: 'left 3s ease-in, left 3s ease-out', 
     top: '591px',  
     background: 'rgba(38, 38, 38, 0.1)',
     border: '1px solid rgba(255, 255, 255, 0.1)',
@@ -525,7 +528,7 @@ export default function Home() {
    width: '268.15px',
    height: '289.98px',
    left: scrolled ? '990px' : '1990px', 
-    transition: 'left 3s ease-in, left 1s ease-out', 
+   transition: 'left 3s ease-in, left 3s ease-out', 
    top: ' 655px',
    backgroundImage: 'url(/images/02.jpg)', 
    backgroundSize: 'cover',
@@ -717,7 +720,7 @@ export default function Home() {
       textAlign: 'center',
       letterSpacing: '-0.02em',
       color: '#FFFFFF',
-      transition: 'top 0.8s ease-out, opacity 0.8s ease-out', 
+      transition: 'top 4s ease-out, opacity 1s ease-out', 
       opacity: scrolled ? 1 : 0,
       top: scrolled ? '403.15px' : '603.15px', 
     }}
@@ -750,9 +753,9 @@ export default function Home() {
             fontWeight:'semi-bold',
             fontSize: '16px', 
             color: '#000000', 
-            transition: 'top 0.8s ease-out, opacity 0.8s ease-out', 
+            transition: 'top 3s ease-out, opacity 3s ease-out', 
             opacity: scrolled ? 1 : 0,
-            top: scrolled ? '611.15px' : '713.15px', 
+            top: scrolled ? '611.15px' : '813.15px', 
           }}
           onMouseEnter={(e) => {
             e.currentTarget.style.background = '#f0f0f0'; 
@@ -817,6 +820,12 @@ export default function Home() {
     </a>
   </nav>
 </header>
+
+{scrolled && (
+  <div style={{marginTop:'1200px'}}><Features /></div>
+)}
+
+
     </div>
   );
 }
