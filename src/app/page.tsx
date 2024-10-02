@@ -2,7 +2,6 @@
 
 import Image from 'next/image';
 import React, { useState, useEffect } from 'react';
-import ToggleIcon from '@mui/icons-material/ToggleOff';
 import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography'; 

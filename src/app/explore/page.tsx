@@ -332,7 +332,7 @@ const Explore = () => {
             fontWeight: 500,
             fontSize: '14.235px',
             lineHeight: '100%',
-            color: 'rgba(255, 255, 255, 0.6)', // White 60%
+            color: 'rgba(255, 255, 255, 0.6)', 
             flex: 'none',
             order: 0,
             flexGrow: 0,
@@ -351,7 +351,7 @@ const Explore = () => {
             fontWeight: 500,
             fontSize: '14.235px',
             lineHeight: '100%',
-            color: 'rgba(255, 255, 255, 0.6)', // White 60%
+            color: 'rgba(255, 255, 255, 0.6)', 
             flex: 'none',
             order: 0,
             flexGrow: 0,
@@ -370,7 +370,7 @@ const Explore = () => {
             fontWeight: 500,
             fontSize: '14.235px',
             lineHeight: '100%',
-            color: 'rgba(255, 255, 255, 0.6)', // White 60%
+            color: 'rgba(255, 255, 255, 0.6)', 
             flex: 'none',
             order: 0,
             flexGrow: 0,
@@ -448,7 +448,6 @@ const Explore = () => {
     left: '20.24px',
     top: '308.17px',
     backgroundColor: '#000', 
-    //overflowX: 'scroll',
   }}
 >
   
@@ -486,7 +485,6 @@ const Explore = () => {
          backgroundColor: 'rgba(0, 0, 0, 0.35)', 
          zIndex: 1, 
          left:   '0px',
-      //   transition: 'left 0.5s ease-in-out', 
        }}
      />
           {/* Restaurant Label */}
@@ -520,7 +518,6 @@ const Explore = () => {
               position: 'absolute',
               left: '75.67%',
               top: '2.5%',
-            //  background: 'rgba(255, 255, 255, 0.6)',
               borderRadius: '50%', 
               zIndex: 2, 
               width: '40px', 
@@ -684,7 +681,6 @@ const Explore = () => {
          backgroundColor: 'rgba(0, 0, 0, 0.35)', 
          zIndex: 1, 
          left:   '0px',
-      //   transition: 'left 0.5s ease-in-out', 
        }}
      />
           {/* Restaurant Label */}
@@ -718,7 +714,6 @@ const Explore = () => {
               position: 'absolute',
               left: '75.67%',
               top: '2.5%',
-            //  background: 'rgba(255, 255, 255, 0.6)',
               borderRadius: '50%', 
               zIndex: 2, 
               width: '40px', 
@@ -796,7 +791,7 @@ const Explore = () => {
               lineHeight: '1', 
             }}
           >
-            &bull; {/* This is the dot character */}
+            &bull; 
           </Typography>
         </span>
 
@@ -846,7 +841,7 @@ const Explore = () => {
     
  </div>
 
- /////
+
 
  <div
      style={{
@@ -883,7 +878,6 @@ const Explore = () => {
          backgroundColor: 'rgba(0, 0, 0, 0.35)', 
          zIndex: 1, 
          left:   '0px',
-      //   transition: 'left 0.5s ease-in-out', 
        }}
      />
           {/* Restaurant Label */}
@@ -917,7 +911,6 @@ const Explore = () => {
               position: 'absolute',
               left: '75.67%',
               top: '2.5%',
-            //  background: 'rgba(255, 255, 255, 0.6)',
               borderRadius: '50%', 
               zIndex: 2, 
               width: '40px', 
@@ -1163,7 +1156,7 @@ const Explore = () => {
               lineHeight: '1', 
             }}
           >
-            &bull; {/* This is the dot character */}
+            &bull; 
           </Typography>
         </span>
 

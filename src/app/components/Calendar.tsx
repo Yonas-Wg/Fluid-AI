@@ -3,7 +3,7 @@ import React from 'react';
 const Calendar: React.FC = () => {
   // Inline styles
   const calendarContainerStyle: React.CSSProperties = {
-    boxSizing: 'border-box' as 'border-box',
+    boxSizing: 'border-box', // Removed type assertion
     position: 'absolute',
     width: '321.18px',
     height: '96.98px',
@@ -28,7 +28,6 @@ const Calendar: React.FC = () => {
     color: 'white',
   };
 
-
   const selectedDayStyle: React.CSSProperties = {
     ...dayStyle,
     background: 'rgba(128, 128, 128, 0.5)',
@@ -48,10 +47,13 @@ const Calendar: React.FC = () => {
         <div style={dayStyle}>Sun 23</div>
         <div style={dayStyle}>Mon 24</div>
         <div style={dayStyle}>Tue 25</div>
-        <div style={dayStyle}>Wed  <div style={selectedDayStyle}>
-         26
-          <div style={underlineStyle}></div> 
-        </div></div>
+        <div style={dayStyle}>
+          Wed 
+          <div style={selectedDayStyle}>
+            26
+            <div style={underlineStyle}></div>
+          </div>
+        </div>
         <div style={dayStyle}>Thu 27</div>
         <div style={dayStyle}>Fri 29</div>
         <div style={dayStyle}>Sat 29</div>

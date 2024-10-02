@@ -1,21 +1,21 @@
-import React from 'react';
-/* eslint-disable-next-line @typescript-eslint/prefer-as-const */
+import React, { CSSProperties } from 'react';
+
 const FluidAISection = () => {
   return (
-    <div style={styles.container as React.CSSProperties}>
-      <h1 style={styles.title as React.CSSProperties}>
+    <div style={styles.container}>
+      <h1 style={styles.title}>
         Fluid AI: Simplify, Organize, and Achieve More
       </h1>
-      <p style={styles.description as React.CSSProperties}>
+      <p style={styles.description}>
         In a world where daily tasks, communication, and goals often become overwhelming, Fluid AI offers an innovative solution. Combining advanced AI technology with a user-friendly interface, it brings together to-do lists, chats, saved items, and bucket lists into one seamless platform.
       </p>
     </div>
   );
 };
 
-const styles = {
+const styles: { [key: string]: CSSProperties } = {
   container: {
-    position: 'absolute' as 'absolute',
+    position: 'absolute', // Type is now inferred correctly
     left: '580px',
     top: '241px',
     width: '380px',
