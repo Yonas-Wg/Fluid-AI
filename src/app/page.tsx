@@ -75,7 +75,7 @@ export default function Home() {
   }}
 >
         <Image
-          src="/images/fluidai.png"
+          src="/images/Fluidai.png"
           alt="Fluid AI"
           width={scrolled ? 200 : 841}
           height={scrolled ? 50 : 180} 
