@@ -5,7 +5,7 @@ import CuriosityPage from '../CuriosityPage/page';
 
 const FullPageLayout = () => {
   const [currentStep, setCurrentStep] = useState(0);
-  const content = [
+  const content = [ 
     {
       text: 'Fluid has Internet access, so you can get up-to-date information from it.',
       image: '/images/services/fluid4.jpg',
